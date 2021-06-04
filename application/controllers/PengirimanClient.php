@@ -178,8 +178,8 @@ class PengirimanClient extends CI_Controller
         $data['pengiriman'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data pengiriman";
         $this->load->view('header0');
-        $this->load->view('baradmin');
         $this->load->view('data/put/pengiriman', $data);
+        $this->load->view('baradmin');
         $this->load->view('footer');
 
     }
@@ -190,8 +190,8 @@ class PengirimanClient extends CI_Controller
             $data['pengiriman'] = json_decode($this->curl->simple_get($this->API, $params));
             $data['title'] = "Edit Data pengiriman";
             $this->load->view('header1');
-            $this->load->view('barpengiriman');
             $this->load->view('staffpengiriman/put/pengiriman', $data);
+            $this->load->view('barpengiriman');
             $this->load->view('footer');
        
         }
@@ -313,8 +313,8 @@ class PengirimanClient extends CI_Controller
     $data['detail'] = json_decode($this->curl->simple_get($this->API1));
     $data['title'] = "Edit Data pengiriman";
     $this->load->view('header0');
-    $this->load->view('baradmin');
     $this->load->view('data/perpindahan_barang',$data);
+    $this->load->view('baradmin');
     $this->load->view('footer');
   }
 
@@ -325,8 +325,8 @@ class PengirimanClient extends CI_Controller
     $data['detail'] = json_decode($this->curl->simple_get($this->API1));
     $data['title'] = "Edit Data pengiriman";
     $this->load->view('header1');
-    $this->load->view('barpengiriman');
     $this->load->view('staffpengiriman/perpindahan_barang',$data);
+    $this->load->view('barpengiriman');
     $this->load->view('footer');
   }
 
@@ -459,13 +459,13 @@ class PengirimanClient extends CI_Controller
       //   exit;
            if($insert){
                echo"berhasil";   
-              redirect('detailclient/indexpengiriman');
+              redirect('Detailclient/indexpengiriman');
   
               } else {
                   echo"gagal";
               }
           } else{
-              redirect('detailclient/indexpengiriman');
+              redirect('Detailclient/indexpengiriman');
           }
       }
 

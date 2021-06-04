@@ -1,5 +1,4 @@
 <?php if($this->session->userdata('level')!='Staff Gudang'){redirect('login');};?>
-
 <div class="cc">
 
   <!-- Content Wrapper. Contains page content -->

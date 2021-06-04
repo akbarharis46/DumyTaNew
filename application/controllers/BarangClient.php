@@ -66,7 +66,7 @@ class BarangClient extends CI_Controller
     public function post()
     {
 
-        $this->API2 = "http://localhost:8080/dummyTA/kategori";
+        $this->API = base_url('kategori');
      $data['kategori'] = json_decode($this->curl->simple_get($this->API2));
      $data['count'] = $this->input->post('count');
 
@@ -80,14 +80,14 @@ class BarangClient extends CI_Controller
 
     public function postbarang()
     {
-     $this->API2 = "http://localhost:8080/dummyTA/kategori";
+        $this->API = base_url('kategori');
      $data['kategori'] = json_decode($this->curl->simple_get($this->API2));
      $data['count'] = $this->input->post('count');
 
       $data['title'] = "Tambah Data barang";
       $this->load->view('header1');
-      $this->load->view('bargudang');
       $this->load->view('staffgudang/post/barang', $data);
+      $this->load->view('bargudang');
       $this->load->view('footer');
     }
 
@@ -184,8 +184,8 @@ class BarangClient extends CI_Controller
         $data['barang'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data Barang";
         $this->load->view('header0');
-        $this->load->view('baradmin');
         $this->load->view('data/put/barang', $data);
+        $this->load->view('baradmin');
         $this->load->view('footer');
 
     }
@@ -197,8 +197,8 @@ class BarangClient extends CI_Controller
         $data['barang'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data Barang";
         $this->load->view('header1');
-        $this->load->view('bargudang');
         $this->load->view('staffgudang/put/barang', $data);
+        $this->load->view('bargudang');
         $this->load->view('footer');
 
     }

@@ -142,8 +142,8 @@ class DetailProduksiClient extends CI_Controller
         $data['detailproduksi'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data Detail Produksi";
         $this->load->view('header0');
-        $this->load->view('baradmin');
         $this->load->view('data/put/detail_produksi', $data);
+        $this->load->view('baradmin');
         $this->load->view('footer');
 
     }
@@ -152,9 +152,9 @@ class DetailProduksiClient extends CI_Controller
         $params = array('id_detailproduksi' =>  $this->uri->segment(3));
         $data['detailproduksi'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data Detail Produksi";
-        $this->load->view('header1');
         $this->load->view('barproduksi');
         $this->load->view('staffproduksi/put/detail_produksi', $data);
+        $this->load->view('header1');
         $this->load->view('footer');
 
     }

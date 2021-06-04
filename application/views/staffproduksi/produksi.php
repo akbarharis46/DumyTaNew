@@ -34,7 +34,7 @@
                 
                   <div class="col-md-3">
 
-                    <a class='btn btn-primary' href="<?php echo site_url(); ?>produksiclient/post/">
+                    <a class='btn btn-primary' href="<?php echo site_url(); ?>produksiclient/postproduksi/">
                       <i class="fa fa-plus"></i>
                       <span>
                         Tambah
@@ -153,11 +153,11 @@
                             <i class="fa fa-pen" aria-hidden="true"></i></a>
 
 
-                            <a class="btn btn-success "  href="<?=base_url();?>produksiclient/data_staffproduksikeluar/<?= $rows->id_produksi;?>">
+                            <a class="btn btn-success "  href="<?=base_url();?>produksiclient/data_staffproduksikeluar/<?php echo $rows->id_produksi ?>">
                             <i class="ion-android-exit" aria-hidden="true"></i></a>
 
 
-                            <a href="<?= base_url(); ?>produksiclient/deleteproduksi/<?= $rows->id_produksi; ?>" class="btn btn-danger" onClick="return confirm('yakin mau hapus');">
+                            <a href="<?php base_url(); ?>produksiclient/deleteproduksi/<?=  $rows->id_produksi ?>" class="btn btn-danger" onClick="return confirm('yakin mau hapus');">
                             <i class="fa fa-trash" aria-hidden="true"></i></a>
 
                         </td>

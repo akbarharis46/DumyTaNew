@@ -142,8 +142,8 @@ class KategoriClient extends CI_Controller
         $data['kategori'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data Kategori";
         $this->load->view('header1');
-        $this->load->view('bargudang');
         $this->load->view('staffgudang/put/kategori', $data);
+        $this->load->view('bargudang');
         $this->load->view('footer');
         
     }

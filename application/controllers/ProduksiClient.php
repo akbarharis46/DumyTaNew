@@ -19,7 +19,7 @@ class ProduksiClient extends CI_Controller
 
 
         // new method
-        $this->API = base_url('produksi');
+        $this->API = base_url('Produksi');
         $this->API1 = base_url('detailproduksi');
         $this->API2 = base_url('detailstockproduksi');
         
@@ -41,7 +41,7 @@ class ProduksiClient extends CI_Controller
         $this->load->view('header0');
         $this->load->view('data/produksi', $data);
         $this->load->view('baradmin');
-        // $this->load->view('footer');
+        $this->load->view('footer');
     }
     public function indexproduksi()
     {
@@ -83,8 +83,8 @@ class ProduksiClient extends CI_Controller
     
       $data['title'] = "Tambah Data produksi";
       $this->load->view('header0');
-      $this->load->view('baradmin');
       $this->load->view('data/post/produksi', $data);
+      $this->load->view('baradmin');
       $this->load->view('footer');
     }
 
@@ -93,8 +93,8 @@ class ProduksiClient extends CI_Controller
     {
       $data['title'] = "Tambah Data produksi";
       $this->load->view('header1');
-      $this->load->view('barproduksi');
       $this->load->view('staffproduksi/post/produksi', $data);
+      $this->load->view('barproduksi');
       $this->load->view('footer');
     }
   
@@ -180,8 +180,8 @@ class ProduksiClient extends CI_Controller
         $data['produksi'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data produksi";
         $this->load->view('header1');
-        $this->load->view('barproduksi');
         $this->load->view('staffproduksi/put/produksi', $data);
+        $this->load->view('barproduksi');
         $this->load->view('footer');
 
     }
@@ -273,12 +273,16 @@ public function deleteproduksi()
     $params = array('id_produksi' =>  $this->uri->segment(3));
     $delete =  $this->curl->simple_delete($this->API, $params);
     if ($delete) {
+        echo"berhasil";
+
         $this->session->set_flashdata('result', 'Hapus Data produksi Berhasil');
     } else {
+        echo"gagal";
+
         $this->session->set_flashdata('result', 'Hapus Data produksi Gagal');
     }
-    // print_r($delete);
-    // die;
+    print_r($delete);
+    die;
     redirect('Produksiclient/indexproduksi');
 }
 
@@ -289,8 +293,8 @@ public function data_produksikeluar()
   $data['produksi'] = json_decode($this->curl->simple_get($this->API,$params));
   $data['title'] = "Edit Data pengiriman";
   $this->load->view('header0');
-  $this->load->view('baradmin');
   $this->load->view('data/perpindahan_dataproduksi',$data);
+  $this->load->view('baradmin');
   $this->load->view('footer');
 }
 
@@ -303,8 +307,8 @@ public function data_staffproduksikeluar()
   $data['produksi'] = json_decode($this->curl->simple_get($this->API,$params));
   $data['title'] = "Edit Data pengiriman";
   $this->load->view('header1');
-  $this->load->view('barproduksi');
   $this->load->view('staffproduksi/perpindahan_dataproduksi',$data);
+  $this->load->view('barproduksi');
   $this->load->view('footer');
 }
 

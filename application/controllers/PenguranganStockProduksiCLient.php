@@ -20,8 +20,8 @@ class PenguranganStockProduksiClient extends CI_Controller
         $data['title'] = "Pengurangan Stock Produksi";
         $data['id_detailproduksi'] = $id_detailproduksi;
         $this->load->view('header0');
-        $this->load->view('baradmin');
         $this->load->view('data/penguranganstock_produksi', $data);
+        $this->load->view('baradmin');
         $this->load->view('footer');
     }
     public function indexproduksi($id_detailproduksi)
@@ -30,8 +30,8 @@ class PenguranganStockProduksiClient extends CI_Controller
         $data['title'] = "Pengurangan Stock Produksi";
         $data['id_detailproduksi'] = $id_detailproduksi;
         $this->load->view('header1');
-        $this->load->view('barproduksi');
         $this->load->view('staffproduksi/penguranganstock_produksi', $data);
+        $this->load->view('barproduksi');
         $this->load->view('footer');
     }
 
@@ -50,8 +50,8 @@ class PenguranganStockProduksiClient extends CI_Controller
         $data['kategori'] = json_decode($this->curl->simple_get($this->API));
         $data['title'] = "kategori";
         $this->load->view('header1');
-        $this->load->view('bargudang');
         $this->load->view('staffgudang/kategori', $data);
+        $this->load->view('bargudang');
         $this->load->view('footer');
     }
 
@@ -61,8 +61,8 @@ class PenguranganStockProduksiClient extends CI_Controller
         $data['kategori'] = json_decode($this->curl->simple_get($this->API));
         $data['title'] = "kategori";
         $this->load->view('header1');
-        $this->load->view('bargudang');
         $this->load->view('staffpengiriman/kategori', $data);
+        $this->load->view('bargudang');
         $this->load->view('footer');
     }
     
@@ -74,8 +74,8 @@ class PenguranganStockProduksiClient extends CI_Controller
       $data['count'] = $this->input->post('count');
 
       $this->load->view('header0');
-      $this->load->view('bar');
       $this->load->view('data/post/pengurangan_stockproduksi', $data);
+      $this->load->view('baradmin');
       $this->load->view('footer');
     }
     public function postproduksi($id_detailproduksi)
@@ -86,8 +86,8 @@ class PenguranganStockProduksiClient extends CI_Controller
       $data['count'] = $this->input->post('count');
 
       $this->load->view('header1');
-      $this->load->view('bar1');
       $this->load->view('staffproduksi/post/pengurangan_stockproduksi', $data);
+      $this->load->view('barproduksi');
       $this->load->view('footer');
     }
 
@@ -216,8 +216,8 @@ class PenguranganStockProduksiClient extends CI_Controller
         $data['title'] = "Edit Data Pengurangan Stock Produksi";
 
         $this->load->view('header0');
-        $this->load->view('bar');
         $this->load->view('data/put/penguranganstock_produksi', $data);
+        $this->load->view('baradmin');
         $this->load->view('footer');
 
     }
@@ -228,8 +228,8 @@ class PenguranganStockProduksiClient extends CI_Controller
         $data['title'] = "Edit Data Pengurangan Stock Produksi";
 
         $this->load->view('header1');
-        $this->load->view('bar1');
         $this->load->view('staffproduksi/put/penguranganstock_produksi', $data);
+        $this->load->view('barproduksi');
         $this->load->view('footer');
 
     }
