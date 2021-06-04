@@ -94,7 +94,7 @@ class KategoriClient extends CI_Controller
         }
         // print_r($insert);
         // die;
-        redirect('Kategoriclient');
+        redirect('KategoriClient');
       }
 
 
@@ -115,7 +115,7 @@ class KategoriClient extends CI_Controller
         }
         // print_r($insert);
         // die;
-        redirect('Kategoriclient/indexgudang');
+        redirect('KategoriClient/indexgudang');
       }
 
 
@@ -167,7 +167,7 @@ class KategoriClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Kategoriclient');
+        redirect('KategoriClient');
     }
 
     public function put_processkategori()
@@ -187,7 +187,7 @@ class KategoriClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Kategoriclient/indexgudang');
+        redirect('KategoriClient/indexgudang');
     }
 
 
@@ -202,7 +202,7 @@ class KategoriClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Kategoriclient');
+        redirect('KategoriClient');
     }
 
 
@@ -217,7 +217,7 @@ class KategoriClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Kategoriclient/indexgudang');
+        redirect('KategoriClient/indexgudang');
     }
 }
 ?>

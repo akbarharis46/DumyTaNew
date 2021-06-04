@@ -106,7 +106,7 @@ class DetailProduksiClient extends CI_Controller
         }
         // var_dump($insert);
         // die;
-        redirect('Detailproduksiclient');
+        redirect('DetailProduksiClient');
       }
 
 
@@ -195,7 +195,7 @@ class DetailProduksiClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('detailproduksiclient');
+        redirect('DetailProduksiClient');
     }
     public function put_processproduksi()
     {
@@ -219,7 +219,7 @@ class DetailProduksiClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Detailproduksiclient/indexproduksi');
+        redirect('DetailProduksiClient/indexproduksi');
     }
 
 
@@ -264,7 +264,7 @@ class DetailProduksiClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Detailproduksiclient');
+        redirect('DetailProduksiClient');
     }
     public function deleteproduksi()
     {
@@ -277,7 +277,7 @@ class DetailProduksiClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Detailproduksiclient/indexproduksi');
+        redirect('DetailProduksiClient/indexproduksi');
     }
 
 

@@ -123,7 +123,7 @@ class PengirimanClient extends CI_Controller
         }
         // print_r($insert);
         //  exit;
-        redirect('pengirimanclient');
+        redirect('PengirimanClient');
       }
 
 
@@ -167,7 +167,7 @@ class PengirimanClient extends CI_Controller
         }
         // print_r($insert);
         //  exit;
-          redirect('pengirimanclient/indexstaffpengiriman');
+          redirect('PengirimanClient/indexstaffpengiriman');
         }
     
 
@@ -239,7 +239,7 @@ class PengirimanClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('pengirimanclient');
+        redirect('PengirimanClient');
     }
 
 
@@ -272,7 +272,7 @@ class PengirimanClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('pengirimanclient/indexstaffpengiriman');
+        redirect('PengirimanClient/indexstaffpengiriman');
 
 
     }
@@ -287,7 +287,7 @@ class PengirimanClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('pengirimanclient');
+        redirect('PengirimanClient');
     }
 
     
@@ -302,7 +302,7 @@ class PengirimanClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('pengirimanclient/indexstaffpengiriman');
+        redirect('PengirimanClient/indexstaffpengiriman');
     }
 
 

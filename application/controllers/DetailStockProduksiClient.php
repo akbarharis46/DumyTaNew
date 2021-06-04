@@ -53,7 +53,7 @@ class DetailStockProduksiClient extends CI_Controller
         $data['title'] = "barang";
         $this->load->view('header1');
         $this->load->view('staffpengiriman/detail_produksi', $data);
-        $this->load->view('bargudang');
+        $this->load->view('barpengiriman');
         $this->load->view('footer');
     }
 
@@ -72,17 +72,15 @@ class DetailStockProduksiClient extends CI_Controller
     }
 
 
-    // public function postbarang()
-    // {
-    //  $this->API2 = "http://localhost:8080/dummyTA/kategori";
-    //  $data['kategori'] = json_decode($this->curl->simple_get($this->API2));
-
-    //   $data['title'] = "Tambah Data barang";
-    //   $this->load->view('header1');
-    //   $this->load->view('bar2');
-    //   $this->load->view('staffgudang/postbarang', $data);
-    //   $this->load->view('footer');
-    // }
+    public function postproduksi()
+    {
+      $data['detailstockproduksi'] = json_decode($this->curl->simple_get($this->API));
+      $data['title'] = "Tambah Data Detai Produksi";
+      $this->load->view('header1');
+      $this->load->view('staffproduksi/post/detail_stockproduksi', $data);
+      $this->load->view('barproduksi');
+      $this->load->view('footer');
+    }
 
   
     public function post_process()
@@ -102,34 +100,29 @@ class DetailStockProduksiClient extends CI_Controller
         }
         // var_dump($insert);
         // die;
-        redirect('Detailstockproduksiclient');
+        redirect('DetailStockProduksiClient');
       }
 
-
-
-    //   public function post_processbarang()
-    //   {
-    //       $data = array(
-    //           'nama_barang'            => $this->input->post('nama_barang'),
-    //           'nama_kategori'           => $this->input->post('nama_kategori'),
-    //           'total'                  => $this->input->post('total'),
-    //           'tanggal'                  => $this->input->post('tanggal'),
-       
-    //       );
-    //       $insert =  $this->curl->simple_post($this->API,$data);
-    //       if ($insert) {
-    //           // echo"berhasil";
-    //           $this->session->set_flashdata('result', 'Data Kategori Berhasil Ditambahkan');
-    //       } else {
-    //           // echo"gagal berhasil";
-    //           $this->session->set_flashdata('result', 'Data Kategori Gagal Ditambahkan');
-    //       }
-    //       // print_r($insert);
-    //       // die;
-    //       redirect('barangclient/index2');
-    //     }
-
-
+      public function post_processproduksi()
+      {
+          $data = array(
+              'stock_produksi'            => $this->input->post('stock_produksi'),
+              'tanggal_stockproduksi'            => $this->input->post('tanggal_stockproduksi'),
+           
+          );
+          $insert =  $this->curl->simple_post($this->API,$data);
+          if ($insert) {
+              // echo"berhasil";
+              $this->session->set_flashdata('result', 'Data Kategori Berhasil Ditambahkan');
+          } else {
+              // echo"gagal berhasil";
+              $this->session->set_flashdata('result', 'Data Kategori Gagal Ditambahkan');
+          }
+          // var_dump($insert);
+          // die;
+          redirect('DetailStockProduksiClient/indexproduksi');
+        }
+  
 
     
     public function put()
@@ -177,7 +170,7 @@ class DetailStockProduksiClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Detailstockproduksiclient');
+        redirect('DetailStockProduksiClient');
     }
 
 
@@ -202,7 +195,7 @@ class DetailStockProduksiClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Detailstockproduksiclient/indexproduksi');
+        redirect('DetailStockProduksiClient/indexproduksi');
     }
 
 
@@ -221,7 +214,7 @@ class DetailStockProduksiClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Detailstockproduksiclient');
+        redirect('DetailStockProduksiClient');
     }
 
 
@@ -236,7 +229,7 @@ class DetailStockProduksiClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Detailstockproduksiclient/indexproduksi');
+        redirect('DetailStockProduksiClient/indexproduksi');
     }
 }
 ?>

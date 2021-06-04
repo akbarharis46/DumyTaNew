@@ -129,7 +129,7 @@ class BarangClient extends CI_Controller
         }
         // print_r($insert);
         // die;
-        redirect('barangclient');
+        redirect('BarangClient');
       }
 
     public function post_processbarang()
@@ -169,7 +169,7 @@ class BarangClient extends CI_Controller
         }
         // print_r($insert);
         // die;
-        redirect('barangclient/indexgudang');
+        redirect('BarangClient/indexgudang');
       }
 
 
@@ -238,7 +238,7 @@ class BarangClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('barangclient');
+        redirect('BarangClient');
     }
 
 
@@ -264,7 +264,7 @@ class BarangClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Barangclient/indexgudang');
+        redirect('BarangClient/indexgudang');
     }
 
 
@@ -283,7 +283,7 @@ class BarangClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Barangclient');
+        redirect('BarangClient');
     }
 
 
@@ -299,7 +299,7 @@ class BarangClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Barangclient/indexgudang');
+        redirect('BarangClient/indexgudang');
     }
 
 

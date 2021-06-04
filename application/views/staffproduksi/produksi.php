@@ -149,15 +149,15 @@
 
                             </td>
                         <td>
-                            <a href="<?php echo site_url(); ?>produksiclient/putproduksi/<?php echo $rows->id_produksi; ?>" class="btn btn-warning">
+                            <a href="<?php echo site_url(); ?>ProduksiClient/putproduksi/<?php echo $rows->id_produksi; ?>" class="btn btn-warning">
                             <i class="fa fa-pen" aria-hidden="true"></i></a>
 
 
-                            <a class="btn btn-success "  href="<?=base_url();?>produksiclient/data_staffproduksikeluar/<?php echo $rows->id_produksi ?>">
+                            <a class="btn btn-success "  href="<?=base_url();?>ProduksiClient/data_staffproduksikeluar/<?php echo $rows->id_produksi ?>">
                             <i class="ion-android-exit" aria-hidden="true"></i></a>
 
 
-                            <a href="<?php base_url(); ?>produksiclient/deleteproduksi/<?=  $rows->id_produksi ?>" class="btn btn-danger" onClick="return confirm('yakin mau hapus');">
+                            <a href="<?php echo site_url(); ?>ProduksiClient/deleteproduksi/<?php echo $rows->id_produksi ?>" class="btn btn-danger" onClick="return confirm('yakin mau hapus');">
                             <i class="fa fa-trash" aria-hidden="true"></i></a>
 
                         </td>

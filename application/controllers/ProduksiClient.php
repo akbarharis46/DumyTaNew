@@ -124,7 +124,7 @@ class ProduksiClient extends CI_Controller
         } else {
             echo"gagal ";
         }
-        redirect('Produksiclient');
+        redirect('ProduksiClient');
       }
 
 
@@ -157,7 +157,7 @@ class ProduksiClient extends CI_Controller
         } else {
             echo"gagal ";
         }
-        redirect('Produksiclient/indexproduksi');
+        redirect('ProduksiClient/indexproduksi');
       }
     
 
@@ -168,8 +168,8 @@ class ProduksiClient extends CI_Controller
         $data['produksi'] = json_decode($this->curl->simple_get($this->API, $params));
         $data['title'] = "Edit Data produksi";
         $this->load->view('header0');
-        $this->load->view('baradmin');
         $this->load->view('data/put/produksi', $data);
+        $this->load->view('baradmin');
         $this->load->view('footer');
 
     }
@@ -222,7 +222,7 @@ class ProduksiClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Produksiclient');
+        redirect('ProduksiClient');
     }
 
 
@@ -249,7 +249,7 @@ class ProduksiClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Produksiclient/indexproduksi');
+        redirect('ProduksiClient/indexproduksi');
     }
 
 
@@ -264,27 +264,23 @@ class ProduksiClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Produksiclient');
+        redirect('ProduksiClient');
+    }
+    public function deleteproduksi()
+
+    {
+        $params = array('id_produksi' =>  $this->uri->segment(3));
+        $delete =  $this->curl->simple_delete($this->API, $params);
+        if ($delete) {
+            $this->session->set_flashdata('result', 'Hapus Data kategori Berhasil');
+        } else {
+            $this->session->set_flashdata('result', 'Hapus Data kategori Gagal');
+        }
+        // print_r($delete);
+        // die;
+        redirect('ProduksiClient/indexproduksi');
     }
 
-
-public function deleteproduksi()
-{
-    $params = array('id_produksi' =>  $this->uri->segment(3));
-    $delete =  $this->curl->simple_delete($this->API, $params);
-    if ($delete) {
-        echo"berhasil";
-
-        $this->session->set_flashdata('result', 'Hapus Data produksi Berhasil');
-    } else {
-        echo"gagal";
-
-        $this->session->set_flashdata('result', 'Hapus Data produksi Gagal');
-    }
-    print_r($delete);
-    die;
-    redirect('Produksiclient/indexproduksi');
-}
 
 public function data_produksikeluar()
 {
@@ -359,13 +355,13 @@ public function prosesdata_produksikeluar()
         //   print_r($update);
         //   exit;
           echo"berhasil";   
-          redirect('Detailproduksiclient');
+          redirect('DetailProduksiClient');
           
         } else {
             echo"gagal";
         }
       } else{
-          redirect('Detailproduksiclient');
+          redirect('DetailProduksiClient');
       }
   }
 
@@ -415,13 +411,13 @@ public function prosesdata_staffproduksikeluar()
         //   print_r($update);
         //   exit;
           echo"berhasil";   
-          redirect('Detailproduksiclient/indexproduksi');
+          redirect('DetailProduksiClient/indexproduksi');
           
         } else {
             echo"gagal";
         }
       } else{
-          redirect('Detailproduksiclient/indexproduksi');
+          redirect('DetailProduksiClient/indexproduksi');
       }
   }
 

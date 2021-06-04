@@ -109,7 +109,7 @@ class StockBarangClient extends CI_Controller
         }
         // print_r($data);
         // die;
-        redirect('Stockbarangclient');
+        redirect('StockBarangClient');
       }
     public function post_processstock()
     {
@@ -134,7 +134,7 @@ class StockBarangClient extends CI_Controller
         }
         // print_r($data);
         // die;
-        redirect('Stockbarangclient/indexgudang');
+        redirect('StockBarangClient/indexgudang');
       }
 
 
@@ -191,7 +191,7 @@ class StockBarangClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Stockbarangclient');
+        redirect('StockBarangClient');
     }
     public function put_processstock()
     {
@@ -215,7 +215,7 @@ class StockBarangClient extends CI_Controller
         }
         // print_r($update);
         // die;
-        redirect('Stockbarangclient/indexgudang');
+        redirect('StockBarangClient/indexgudang');
     }
 
 
@@ -233,7 +233,7 @@ class StockBarangClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('Stockbarangclient');
+        redirect('StockBarangClient');
     }
     public function deletestock()
     {
@@ -246,7 +246,7 @@ class StockBarangClient extends CI_Controller
         }
         // print_r($delete);
         // die;
-        redirect('stockbarangclient/indexgudang');
+        redirect('StockBarangClient/indexgudang');
     }
 
 

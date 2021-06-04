@@ -186,24 +186,6 @@ class PenguranganStockProduksiClient extends CI_Controller
 
 
 
-    //   public function post_processkategori()
-    // {
-    //     $data = array(
-    //         'nama_kategori'                   => $this->input->post('nama_kategori'),
-     
-    //     );
-    //     $insert =  $this->curl->simple_post($this->API,$data);
-    //     if ($insert) {
-    //         // echo"berhasil";
-    //         $this->session->set_flashdata('result', 'Data Kategori Berhasil Ditambahkan');
-    //     } else {
-    //         // echo"gagal berhasil";
-    //         $this->session->set_flashdata('result', 'Data Kategori Gagal Ditambahkan');
-    //     }
-    //     // print_r($insert);
-    //     // die;
-    //     redirect('kategoriclient/indexgudang');
-    //   }
 
 
 

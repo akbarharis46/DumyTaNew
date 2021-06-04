@@ -72,7 +72,7 @@ public function delete()
     }
     // print_r($delete);
     // die;
-    redirect('Detailclient/index');
+    redirect('DetailClient/index');
 }
 
 
@@ -88,7 +88,7 @@ public function deletestaffpengiriman()
     }
     // print_r($delete);
     // die;
-    redirect('Detailclient/indexpengiriman');
+    redirect('DetailClient/indexpengiriman');
 }
 
     
